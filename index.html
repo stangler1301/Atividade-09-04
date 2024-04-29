@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Atividade 04</title>
+</head>
+<body style="text-align: center;">
+  <div style="color: rgb(40, 111, 245);">
+    <h1>Exercícios JavaScript</h1>
+</div>
+  <div style= "padding-bottom: 20px;">
+  <button onclick="helloWorld()">Exibir 'Olá Mundo'</button>
+</div>
+  <input id="num1" type="number">
+  <input id="num2" type="number">
+  <button onclick="sum()">somar</button>
+  <p id="sumResult"></p>
+  <p id="myId">Alterar por ID.</p>
+  <button onclick="changeById()">Clique para alterar propriedade por id</button>
+  <p name="myName">Alterar por NAME.</p>
+  <button onclick="changeByName()">Clique para alterar propriedade por name</button>
+  <p class="myClass">Alterar por Class.</p>
+  <button onclick="changeByClass()">Clique para alterar propriedade por class</button>
+
+<script>
+  function helloWorld() {
+    alert('Olá Mundo');
+  }
+
+  function sum() {
+    var num1 = document.getElementById('num1').value;
+    var num2 = document.getElementById('num2').value;
+    var sum = parseInt(num1) + parseInt(num2);
+    document.getElementById('sumResult').innerHTML = 'A soma é: ' + sum;
+  }
+
+  function changeById() {
+    document.getElementById('myId').style.color = 'red';
+  }
+
+  function changeByName() {
+    var elements = document.getElementsByName('myName');
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].style.color = 'blue';
+    }
+  }
+
+  function changeByClass() {
+    var elements = document.getElementsByClassName('myClass');
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].style.color = 'green';
+    }
+  }
+</script>
+
+</body>
+</html>
